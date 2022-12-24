@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Ayush portfolio</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Poppins:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                margin: 0;
+                padding:0;
+                background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            h1,h2,h3{
+                font-family: "Days one",sans-serif;
+            }
+
+            nav{
+                display: flex;
+                justify-content: center;
+                background-color: rgb(30, 3, 57);
+                position: fixed;
+                width: 100%;   
+                z-index: 1;  
+                                                              
+                }
+
+            nav ul{
+                display: flex;
+                list-style: none;
+                padding: 0 10%;
+            }
+
+            nav ul li a{
+                color:white;
+                padding:0 20px;
+                font-size: 20px;
+                transition:0.2s;
+                text-transform:uppercase;
+            }
+
+            nav ul li a:hover{
+                transition:0.2s;
+                color:darkcyan
+            }
+
+            .container{
+                position: relative;
+                width: 100%;
+                max-width: 1200px;
+                margin:0 auto;
+                padding:0 15px;               
+            }
+
+            .hero{
+                padding: 50px;               
+            }
+
+            .hero img{
+                border-style: none;
+                border-radius: 50%;               
+                margin:0 auto;
+                max-width: 600px;
+                height: auto;
+                display: block;
+            }
+
+            h1{
+                color: black;
+                text-align: center;
+                font-size: 25px;
+                margin:30px 0px 100px;
+            }
+
+            .aboutme{
+                width:90%;
+                max-width: 1100px;
+                height: auto;
+                background-color: white;
+                text-align: center;
+                padding: 40px 50px 70px;
+                margin: 0 auto;
+                box-shadow: 10px 10px 0px gray,-10px -10px 0px palevioletred;
+
+            }
+
+            .aboutme-section{
+                padding:5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: wrap ;
+            }
+
+            .aboutme-img{
+                height:450px;
+                width:400px;
+                background-image: url("Ayushphoto.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+
+            .aboutme-text{
+                height: auto;
+                width:40%;
+                margin-left:40px;
+                text-align:left;               
+            }
+
+            .projects{
+                width:90%;
+                text-align: center;
+                padding:40px 50px 70px;               
+                margin-top:20px;
+                color:white;
+            }
+
+            .project-section{
+                padding:5px 100px;
+                display:flex;              
+                align-items:center;
+                justify-content: center;
+            }
+
+            
+            .insta-img{
+                display: inline-flex;
+                height:400px;
+                width:400px;
+               position: relative;
+               border-radius:10px;
+                margin-right: 50px;
+                background-image: url("insta1.jpg");
+                background-size: cover;
+                background-position: center;               
+                margin-left: 10px;               
+            }
+
+            .bbc-img{
+                display: inline-flex;
+                height:400px;
+                width:400px;
+                position: relative;
+                margin-left: 50px;
+                background-image: url("bbcnews.png");
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+                margin-right:10px;                
+            }
+
+            .text{
+                position: absolute;
+                height:30px;
+                width:90%;
+                left:0;
+                bottom:0;
+                z-index:2;
+                background-color: white;
+                overflow:hidden;
+                transition:0.2s;
+                padding:20px;
+            }
+
+            .text:hover{
+                height:100px;
+                transition:0.3s;
+            }
+
+            .text h3{
+                margin-top:5px;
+                color:black;
+            }
+
+            .content{
+                color:black;
+            }
+
+            .button{
+                border:5px solid lightblue;
+                border-radius:10px;
+                width:150px;
+                margin-bottom:100px;
+                margin-left:10px;
+            }
+
+            .id{
+                justify-content: center;
+                text-align: center;
+                color: white;
+            }
+
+            .contact{
+                width:100%;
+                height:auto;
+                padding: 70px 0px 50px;                
+                justify-content: center;
+            }
+
+            .contact h2,.contact p{
+                text-align: center;
+                color: white;
+            }
+
+            .contact p{
+                margin-bottom: 50px;
+            }
+
+            .contact-form{
+                display: flex;
+                text-align: left;
+                color:white;
+                align-items: center;
+                justify-content: center;                         
+            }
+
+            .contact-form label{
+                display: block;
+                margin-bottom:8px;
+            }
+
+            .message{
+                display:flex;
+                flex-direction: column;
+                width:30%;
+            }
+
+            .message textarea{
+                border-radius: 10px;
+            }
+
+            .details{
+                flex:0;
+                margin-right:50px;
+                justify-items: center;
+            }
+
+            .details input{
+                width:250px;
+                border-radius: 5px;
+                border:0px;
+                padding:15px 20px;
+                margin-bottom: 20px;
+            }
+
+            .message button{
+                color:blue;
+                border:0;
+                border-radius: 5px;
+                background-color: skyblue;
+                width:100px;
+                height:40px;
+                margin-top:40px;
+                margin-left:auto;
+                font-weight: bold;
+                cursor: pointer;
+                text-transform: uppercase;
+                transition: 0.3s;
+            }
+
+            .message button:hover{
+                background: black;
+                color: white;
+                transition: 0.2s;
+            }
+
+            footer{
+                height:90px;
+                width:100%;
+                background-color: #1f2027;
+                margin-bottom: 0;
+            }
+
+            footer .container2{
+                display: flex;
+                align-items: center;
+                height: 100px;
+            }
+
+            .social{
+                font-size: 200%;
+                width:auto;
+                margin-left: auto;
+            }
+
+            .social a{
+                color: white;
+                transition: 0.2s;
+            }
+
+            .social a i:hover{
+                color:lightblue;
+                transition: 0.2;
+            }
+
+            .copyright{
+                color:white;
+            }
+                      
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="aboutme.html">ABOUT ME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT ME</a></li>
+            </ul>
+        </nav>
+
+        <section class="container">
+            <div class="hero">
+                <img src="hey.png">
+              <h1>Hi! I'm Ayush! I am learning Front end development.</h1>
+            </div>
+        </section>
+
+        <section class="aboutme">
+            <h2>About me</h2>
+            <div class="aboutme-section">
+                <div class="img">
+                    <div class="aboutme-img"></div>
+                </div>
+                <div class="aboutme-text">
+                    <p>I am Ayush Madhapure. I had completed my bachelors in Mechanical Engineering. i want to make my 
+                    career in IT industry as a web developer. I know HTML, CSS, Javascriptt, Bootstrap, SQL, Oracle,NODEjs and other things also. I have little bit knowledge of C,c++,java and
+                    python
+                    .</p>
+                        <p>Cricket is my favourite Sports and Rohit sharma is favourite cricketer.
+                            Watching movies and series is my next level hobby. 
+                        </p> 
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project-section">
+                
+                    <div class="insta-img">    
+                              <div class="text">
+                                <h3 class="name">Instagram Clone</h3>
+                                <div class="content">
+                                    <p>This project is clone of Instagram.</p>
+                                </div>
+                                <a class="button" href="file:///C:/instagram%20clone/index.html">View project</a>
+                              </div>         
+                    </div>
+
+                    <div class="bbc-img">    
+                        <div class="text">
+                          <h3 class="name">BBC News Clone</h3>
+                          <div class="content">
+                              <p>This project is clone of the BBC news website.</p>
+                          </div>
+                          <a class="button" href="index.html">View project</a>
+                        </div>         
+              </div>             
+            </div>
+        </section>
+
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>Use this form to get in touch. I would love to hear from you</p>
+
+            <form class="contact-form">
+
+                <div class="details">
+
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Yourname">
+
+                    <label for="Subject">Subject</label>
+                    <input type="text" placeholder="Reason for your message">
+
+                    <label for="Email">Email</label>
+                    <input type="mail" placeholder="abc@gmail.com">
+                </div>
+
+                <div class="message">
+                    <label for="message">Message</label>
+                    <textarea rows="15"></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            <div class="container2">
+                <div class="copyright">
+                    This site &copy; 2022 Ayush Madhapure
+                </div>
+                <div class="social">
+                    <a  href="https://www.facebook.com/ayush.madhapure.16"><i class="fa fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/ayush_madhapure/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/AyushMadhapure?t= zzTCmlQWxdlzZ7-jZKEDhw&s=09"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    
+    </body>
+</html>
